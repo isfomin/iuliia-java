@@ -1,6 +1,5 @@
 package ru.homyakin.iuliia;
 
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.io.InputStream;
@@ -32,7 +31,8 @@ public enum Schemas {
     UNGEGN_1987("ungegn_1987.json"),
     WIKIPEDIA("wikipedia.json"),
     YANDEX_MAPS("yandex_maps.json"),
-    YANDEX_MONEY("yandex_money.json");
+    YANDEX_MONEY("yandex_money.json"),
+    YANDEX_MONEY_EN("yandex_money_en.json");
 
     private final String name;
 

@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class Translator {
 
-    private final static Pattern separator = Pattern.compile("\\b");
+    private static final Pattern separator = Pattern.compile("\\b");
     private final Schema schema;
 
     /**

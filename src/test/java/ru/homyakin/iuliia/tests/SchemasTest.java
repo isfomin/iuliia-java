@@ -196,4 +196,11 @@ public class SchemasTest {
         var sentence = translator.translate("Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю");
         Assert.assertEquals("Yuliya, sesh esche etikh myagkikh frantsuzskikh bulok iz Ioshkar-Oly, da vypei altaiskogo chayu", sentence);
     }
+
+    @Test
+    public void yandexMoneyEnTest() throws IOException {
+        var translator = new Translator(Schemas.YANDEX_MONEY_EN);
+        var sentence = translator.translate("ROSSIYA, 681000, KOMSOMOMLSK-N, 33 KOMSOMOLSKAYA");
+        Assert.assertEquals("РОССИЯ, 681000, КОМСОМОМЛСК-Н, 33 КОМСОМОЛСКАЯ", sentence);
+    }
 }
