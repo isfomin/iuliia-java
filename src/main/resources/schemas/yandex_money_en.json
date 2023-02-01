@@ -1,0 +1,65 @@
+{
+    "name": "yandex_money",
+    "description": "Yandex.Money transliteration schema en -> ru",
+    "url": "https://iuliia.ru/yandex-money/",
+    "mapping": {
+        "a": "а",
+        "b": "б",
+        "v": "в",
+        "g": "г",
+        "d": "д",
+        "e": "е",
+        "z": "з",
+        "i": "и",
+        "j": "й",
+        "k": "к",
+        "l": "л",
+        "m": "м",
+        "n": "н",
+        "o": "о",
+        "p": "п",
+        "r": "р",
+        "s": "с",
+        "t": "т",
+        "u": "у",
+        "f": "ф",
+        "y": "ы",
+        "'": "ь"
+    },
+    "prev_mapping": {
+        "ia":  "",
+        "ya":  "",
+        "zh":  "",
+        "ch":  "",
+        "kh":  "",
+        "ts":  "",
+        "sh":  "",
+        "sch": "",
+        "je":  "",
+        "yu":  "",
+        "yo":  ""
+    },
+    "next_mapping": {
+        "ia":  "ия",
+        "ya":  "я",
+        "zh":  "ж",
+        "ch":  "ч",
+        "kh":  "х",
+        "ts":  "ц",
+        "sh":  "ш",
+        "sch": "щ",
+        "je":  "э",
+        "yu":  "ю",
+        "yo":  "ё"
+    },
+    "ending_mapping": null,
+    "samples": [
+        [
+            "Yuliya, sesh esche etikh myagkikh frantsuzskikh bulok iz Ioshkar-Oly, da vypei altaiskogo chayu",
+            "Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю"
+        ],
+        ["Yuliya Scheglova","Юлия Щеглова"],
+        ["Ivan Bryzgalskii", "Иван Брызгальский"],
+        ["Kseniya Stryi", "Ксения Стрый"]
+    ]
+}
