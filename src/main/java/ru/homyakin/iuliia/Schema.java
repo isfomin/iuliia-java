@@ -43,12 +43,15 @@ public class Schema {
         return letter;
     }
 
-    public String nativeTranslate(String word) {
+    public Optional<String> nativeTranslate(String word) {
+        if (translation == null) {
+            return Optional.empty();
+        }
         String translatedWord = translation.get(word);
         if (translatedWord == null) {
             translatedWord = translation.get(word.toLowerCase());
         }
-        return translatedWord;
+        return Optional.ofNullable(translatedWord);
     }
 
     @JsonProperty("mapping")
