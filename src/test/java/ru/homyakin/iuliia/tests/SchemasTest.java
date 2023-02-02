@@ -203,8 +203,8 @@ public class SchemasTest {
         var sentence1 = translator.translate("ROSSIYA, 681000, KOMSOMOMLSK-N, 33 KOMSOMOLSKAYA");
         var sentence2 = translator.translate("RUSSIA, 681000, KOMSOMOMLSK-N, 33 KOMSOMOLSKAYA");
         var sentence3 = translator.translate("MOSCOW, 681000, KOMSOMOMLSK-N, 33 KOMSOMOLSKAYA");
-        Assert.assertEquals("РОССИЯ, 681000, КОМСОМОМЛСК-Н, 33 КОМСОМОЛСКАЯ", sentence1);
-        Assert.assertEquals("РОССИЯ, 681000, КОМСОМОМЛСК-Н, 33 КОМСОМОЛСКАЯ", sentence2);
-        Assert.assertEquals("МОСКВА, 681000, КОМСОМОМЛСК-Н, 33 КОМСОМОЛСКАЯ", sentence3);
+        Assertions.assertEquals("РОССИЯ, 681000, КОМСОМОМЛСК-Н, 33 КОМСОМОЛСКАЯ", sentence1);
+        Assertions.assertEquals("РОССИЯ, 681000, КОМСОМОМЛСК-Н, 33 КОМСОМОЛСКАЯ", sentence2);
+        Assertions.assertEquals("МОСКВА, 681000, КОМСОМОМЛСК-Н, 33 КОМСОМОЛСКАЯ", sentence3);
     }
 }
