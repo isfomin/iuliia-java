@@ -53,6 +53,10 @@
         "yo":  "ё"
     },
     "ending_mapping": null,
+    "translation": {
+        "russia": "россия",
+        "moscow": "москва"
+    },
     "samples": [
         [
             "Yuliya, sesh esche etikh myagkikh frantsuzskikh bulok iz Ioshkar-Oly, da vypei altaiskogo chayu",

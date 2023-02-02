@@ -2,10 +2,8 @@ package ru.homyakin.iuliia;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Optional;
+
+import java.util.*;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Schema {
@@ -17,6 +15,7 @@ public class Schema {
     private Map<String, String> prevMapping;
     private Map<String, String> nextMapping;
     private Map<String, String> endingMapping;
+    private Map<String, String> translation;
 
     public String getName() {
         return name;
@@ -42,6 +41,14 @@ public class Schema {
             letter = mapping.getOrDefault(curr, curr);
         }
         return letter;
+    }
+
+    public String nativeTranslate(String word) {
+        String translatedWord = translation.get(word);
+        if (translatedWord == null) {
+            translatedWord = translation.get(word.toLowerCase());
+        }
+        return translatedWord;
     }
 
     @JsonProperty("mapping")
@@ -95,6 +102,20 @@ public class Schema {
                 endingMapping.put(entry.getKey().toUpperCase(), entry.getValue().toUpperCase());
             }
             this.endingMapping = endingMapping;
+        }
+    }
+
+    @JsonProperty(value = "translation", required = false)
+    private void unpackTranslation(Map<String, String> translation) {
+        if (translation == null) {
+            this.translation = new HashMap<>();
+        } else {
+            var entrySet = new HashSet<>(translation.entrySet());
+            for (var entry : entrySet) {
+                translation.put(capitalize(entry.getKey()), capitalize(entry.getValue()));
+                translation.put(entry.getKey().toUpperCase(), entry.getValue().toUpperCase());
+            }
+            this.translation = translation;
         }
     }
 
