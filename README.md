@@ -2,15 +2,10 @@
 
 > Transliterate Cyrillic → Latin in every possible way
 
+this fork append:
+> Transliterate Latin -> Cirilic with support the native translation some words
+
 Transliteration means representing Cyrillic data (mainly names and geographic locations) with Latin letters. It is used for international passports, visas, green cards, driving licenses, mail and goods delivery etc.
-
-## Why use `Iuliia`
-
--   [20 transliteration schemas](https://github.com/nalgeon/iuliia/blob/master/README.md#supported-schemas) (rule sets), including all main international and Russian standards.
--   Correctly implements not only the base mapping, but all the special rules for letter combinations and word endings (AFAIK, Iuliia is the only library which does so).
--   Simple API.
-
-For schema details and other information, see <https://dangry.ru/iuliia> (in Russian).
 
 ## Installation
 Maven dependency
