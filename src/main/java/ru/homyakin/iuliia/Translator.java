@@ -31,11 +31,17 @@ public class Translator {
     }
 
     private String translateWord(String word) {
+        String translated = nativeTranslateWord(word);
+        if (translated != null) return translated;
         var splitWord = splitWord(word);
         var translatedEnding = schema.translateEnding(splitWord.ending);
         return translatedEnding
             .map(s -> translateLetters(splitWord.stem) + s)
             .orElseGet(() -> translateLetters(word));
+    }
+
+    private String nativeTranslateWord(String word) {
+        return schema.nativeTranslate(word);
     }
 
     private String translateLetters(String word) {
